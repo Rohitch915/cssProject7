@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 6% 94%;
+    grid-template-areas: 'aside header'
+        'aside main'
+        '. main';
+    grid-template-rows: 140px auto auto;
+}
+
+.header {
+    grid-area: header;
+
+}
+
+.header-1 {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 70px;
+    border-bottom: 0.5px solid #ccc;
+    
+}
+
+.youtube-logo {
+    width: 150px;
+    height: auto;
+}
+
+.header-1-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.search-section {
+    display: inline;
+
+}
+
+.text-box {
+    min-width: 600px;
+    padding: 10px 20px;
+    border: 0.5px solid #ccc;
+    height: 60px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    height: 60px;
+    border-radius: 0px;
+    border: 0px;
+
+}
+
+.mic-icon {
+    height: 60px;
+    background-color: #e9e9ed;
+    border-radius: 50%;
+    padding: 10px 10px;
+    margin-left: 20px;
+}
+
+.header-1-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+}
+
+.header-2 {
+    height: 55px;
+    
+}
+.header-2 ul{
+    list-style-type: none;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 55px;
+    width:100%;
+}
+.header-2 ul li:first-child{
+    background: #000;
+  color: white;
+}
+.header-2 ul li{
+    border: 1px solid black;
+    border-radius: 20px;
+    background: rgb(238, 238, 238);
+    padding: 5px 15px;
+    margin: 0px 10px;
+}
+
+.aside {
+    grid-area: aside;
+}
+.aside ul{
+    display:flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    list-style-type: none;
+}
+.side-bars{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.side-bars img{
+    width:30px;
+}
+.aside ul li:first-child{
+    margin-top: 20px;
+  
+}
+.aside ul li p{
+    font-size: 10px;
+}
+
+.main {
+    grid-area: main;
+    min-height: 100vh;
+  background: rgb(240, 238, 238);
+  width:100%;
+}
+.main-container{
+    display:grid;
+    gap:40px 10px;
+    grid-template-columns: auto auto auto auto;
+}
+.main-container .card{
+    max-width: 320px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.card .thumbnail img{
+    width: 290px;
+    height: 170px;
+}
+.card .description{
+    display: flex;
+    justify-content: flex-start;
+    
+}
+.card .description img{
+   padding: 5px;
+}
+.content h3,p{
+    padding: 3px 0px;
+}
+.channel-status{
+    font-size: 14px;
+}
+
+@media screen and (max-width:1372px)
+{
+    .main-container{
+        gap:30px 10px;
+        grid-template-columns: auto auto auto ;
+    }
+}
+@media screen and (max-width:1270px)
+{
+    .header-1{
+        height: 150px;
+        position: relative;
+    }
+    .container {
+        grid-template-areas: 'aside header'
+            'aside header'
+            '. main';
+        grid-template-rows: 140px 90px auto;
+    }
+    .header-1-center {
+       
+      position: absolute;
+      top:70px;
+    }
+    .header-1{
+      align-items: flex-start;
+      padding: 20px 70px 0px 0px;
+    }
+}
+
+@media screen and (max-width:1024px)
+{
+    .main-container{
+        grid-template-columns: auto auto  ;
+    }
+    .text-box {
+        min-width: 400px;
+       
+    }
+    .container {
+        
+        grid-template-columns: 80px auto;
+       
+    }
+}
+@media screen and (max-width:715px)
+{
+    .main-container{
+        grid-template-columns: auto ;
+        justify-content: center;
+    }
+
+    .main-container .card{
+        max-width: 420px;
+        
+    }
+    .card .thumbnail img{
+        width: 370px;
+        height: 200px;
+    }
+    .text-box {
+        min-width: 270px;
+       
+    }
+    .header-2 ul li{
+       
+        margin: 0px 4px;
+    }
+}
+
+@media screen and (max-width:570px)
+{
+    .main-container{
+        grid-template-columns: auto ;
+        justify-content: flex-start;
+        width:100%;
+    }
+
+    .main-container .card{
+        max-width: 300px;
+        
+    }
+    .card .thumbnail img{
+        width: 300px;
+        height: 200px;
+    }
+    .card .description{
+        width:300px;
+    }
+    .header-2 ul li{
+      
+        padding: 3px 6px;
+        margin: 0px 4px;
+    }
+    .search-section{
+        width:270px;
+    }
+    .text-box {
+        width: 200px;
+        height: 50px;
+    }
+    .search-button {
+        padding: 5px 10px;
+        height: 50px;
+      
+    
+    }
+    
+    .mic-icon {
+        height: 50px;
+        padding: 5px 5px;
+        margin-left: 10px;
+    }
+    .youtube-logo {
+        width: 100px;
+        height: auto;
+    }
+    .header-1-right img{
+        height:30px;
+    }
+    .header-1-right {
+        width: 150px;
+    }
+    .container {
+        
+        grid-template-columns: 60px auto;
+       
+       
+    } 
+    .aside ul li p{
+        font-size: 9px;
+    }
+}
